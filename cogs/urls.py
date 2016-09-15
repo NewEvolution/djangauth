@@ -6,9 +6,9 @@ from cogs import views
 
 router = DefaultRouter()
 router.register(r'cogs', views.CogViewSet)
-router.register(r'notes', views.NoteViewSet)
-router.register(r'pnotes', views.PersonalNoteViewSet)
 router.register(r'users', views.UserViewSet)
+router.register(r'notes', views.NoteViewSet)
+router.register(r'personalnotes', views.PersonalNoteViewSet)
 
 urlpatterns = [
     url(r'^', include(router.urls)),
