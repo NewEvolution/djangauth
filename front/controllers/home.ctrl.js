@@ -12,3 +12,7 @@ angular.module('Djangauth')
         })
     }
   ])
+  .controller('HomeControl', function () {
+    const home = this;
+    home.heading = 'Yep, got us some AngularJS';
+  })
