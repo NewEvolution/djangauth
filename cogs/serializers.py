@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from cogs.models import User, Cog
+from cogs.models import User, Cog, Note
 
 
 class CogSerializer(serializers.HyperlinkedModelSerializer):
