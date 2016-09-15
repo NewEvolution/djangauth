@@ -1,6 +1,6 @@
 from rest_framework import permissions
 
-class IsCogmakerOrReadOnly(permissions.BasePermission):
+class CogmakerOrReadOnly(permissions.BasePermission):
     """
     Custom permission so only Cog Maker users can make cogs,
     and only the creator can edit/delete cogs.
