@@ -17,7 +17,7 @@ class CogmakerOrReadOnly(permissions.BasePermission):
 
 class SameTypeOnly(permissions.BasePermission):
     """
-    Custom permission for Cog User only notes.
+    Custom permission for same type user only notes.
     """
 
     def has_object_permission(self, request, view, obj):
