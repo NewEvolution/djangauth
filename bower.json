@@ -1,0 +1,22 @@
+{
+  "name": "djangauth",
+  "description": "'Exploring user-based authentication in Django with an AngularJS interface'",
+  "main": "app.js",
+  "authors": [
+    "Ryan Tanay <rtanay@gmail.com> (http://portfolio.ryantanay.com/)"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "django",
+    "authentication",
+    "user"
+  ],
+  "homepage": "https://github.com/NewEvolution/djangauth",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
