@@ -1,12 +1,11 @@
 'use strict'
 
-const app = angular.module('Djangauth', ['ngRoute']) // eslint-disable-line no-unused-vars
+angular.module('Djangauth', ['ngRoute'])
+  .constant('apiUrl', 'http://localhost:8000')
   .config([
     '$httpProvider',
-    '$routeProvider',
-    function ($httpProvider, $routeProvider) { // eslint-disable-line no-unused-vars
+    function ($httpProvider) {
       $httpProvider.defaults.xsrfCookieName = 'csrftoken';
       $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
-
     }
   ])
