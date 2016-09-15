@@ -1,5 +1,7 @@
 from rest_framework import serializers
+
 from cogs.models import User, Cog
+
 
 class CogSerializer(serializers.HyperlinkedModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
@@ -15,3 +17,11 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
         fields = ('url', 'pk', 'username', 'user_type', 'cogs')
+
+
+class NoteSerializer(serializers.HyperlinkedModelSerializer):
+    owner = serializers.ReadOnlyField(source='owner.username')
+
+    class Meta:
+        model = Note
+        fields = ('url', 'pk', 'title', 'text', 'owner')

@@ -74,6 +74,14 @@ TEMPLATES = [
 WSGI_APPLICATION = 'djangauth.wsgi.application'
 
 
+# Django REST Framework
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+    )
+}
+
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 

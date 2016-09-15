@@ -2,6 +2,7 @@ from django.db import models
 from django.conf import settings
 from django.contrib.auth.models import AbstractUser
 
+
 USER_TYPES = [('cogmaker', 'Cog Maker'), ('coguser', 'Cog User')]
 
 class User(AbstractUser):
