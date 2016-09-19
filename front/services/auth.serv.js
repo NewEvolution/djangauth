@@ -1,19 +1,22 @@
 'use strict'
 
-let credentials = {};
+let credentials = null;
 
 class AuthService {
   authorized (creds) {
     return new Promise((resolve, reject) => {
       if (creds) {
-        credentials = creds;
-      } else if (credentials.hasOwnProperty('username')) {
-        resolve(window.btoa(`${credentials.username}:${credentials.password}`));
-      } else {
-        reject(false);
+        credentials = window.btoa(`${creds.username}:${creds.password}`);
+        $cookies.put('djangauth', credentials); // eslint-disable-line no-undef
+      } else if (credentials) {
+        credentials = $cookies.get('djangauth'); // eslint-disable-line no-undef
       }
+      if (credentials) {
+        resolve(credentials);
+      }
+      reject(false);
     })
   }
 }
 
-angular.module('Djangauth').service('authService', AuthService);
+angular.module('Djangauth').service('authService', ['$cookies', AuthService]);
