@@ -55,6 +55,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'djangauth.urls'
 
+CORS_ORIGIN_ALLOW_ALL = False
+
+CORS_ORIGIN_WHITELIST = (
+    'localhost:8001',
+    '127.0.0.1:8001',
+)
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
